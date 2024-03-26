@@ -1,0 +1,6 @@
+(rule
+ (mode (promote (until-clean)))
+ (enabled_if (= %{context_name} "default"))
+ (target (dir mirage))
+ (deps config.ml)
+ (action (run mirage configure -f config.ml)))
