@@ -1,0 +1,7 @@
+(rule
+  (targets (dir foo))
+  (mode promote)
+  (deps ./config.sh)
+  (action (run ./config.sh)))
+
+(rule (copy foo/main.exe main.exe))
